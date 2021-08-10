@@ -43,7 +43,7 @@ class FilterList
     public function afterGetFilters(\Magento\Catalog\Model\Layer\FilterList $subject, $result, Layer $layer)
     {
         $customFilters = $this->getCustomFilters($layer);
-        $result = array_merge_recursive($result, $customFilters);
+        $result = array_merge($result, $customFilters);
         return $result;
     }
 }
